@@ -68,7 +68,7 @@ python -m venv venv
 source venv/Scripts/activate  # Windows
 pip install -r requirements.txt
 cp .env.example .env
-uvicorn main:app --reload
+python -m uvicorn main:app --reload
 ```
 
 ### 3️⃣ Setup Frontend

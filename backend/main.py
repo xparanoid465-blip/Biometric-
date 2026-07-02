@@ -1,3 +1,10 @@
+import os
+import sys
+
+BACKEND_DIR = os.path.dirname(os.path.abspath(__file__))
+if BACKEND_DIR not in sys.path:
+    sys.path.insert(0, BACKEND_DIR)
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.middleware.trustedhost import TrustedHostMiddleware
@@ -52,7 +59,7 @@ app.add_middleware(
 # Trusted host middleware
 app.add_middleware(
     TrustedHostMiddleware,
-    allowed_hosts=["localhost", "127.0.0.1", "localhost:5173", "localhost:3000", "localhost:5000", "10.182.234.13", "10.182.234.13:5173", "10.182.234.13:5000"]
+    allowed_hosts=["*"]
 )
 
 # Include routers

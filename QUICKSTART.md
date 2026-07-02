@@ -22,7 +22,7 @@ pip install -r requirements.txt
 copy .env.example .env
 
 # Run backend
-uvicorn main:app --reload
+cd backend && python -m uvicorn main:app --reload
 ```
 
 ✅ Backend running at: **http://localhost:5000**
