@@ -17,3 +17,4 @@ slowapi==0.1.9
 python-dateutil==2.8.2
 aiofiles==23.2.1
 pymongo==4.9.0
+email-validator==2.2.0
